@@ -1,6 +1,15 @@
 .flex {
   display: flex;
 }
+.btn {
+  color: white;
+  background-color: #17A2B8;
+  border-radius: 15%;
+  width: 100%;
+  height: 15%;
+  padding-top: 5%;
+  text-align: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -177,19 +186,38 @@ img {
   width: 100%;
   margin-top: 4%;
   margin-bottom: 3.5%;
+  justify-content: space-between;
 }
-.container .top-banner nav {
+@media (max-width: 500px) {
+  .container .top-banner {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+.container .top-banner h1 {
+  width: 35%;
+}
+@media (max-width: 500px) {
+  .container .top-banner h1 {
+    margin-left: 32%;
+    margin-bottom: 2%;
+  }
+}
+.container .top-banner .nav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  width: 49%;
+  justify-content: space-between;
+  width: 45%;
   align-items: center;
 }
-.container .top-banner nav a {
+@media (max-width: 500px) {
+  .container .top-banner .nav {
+    width: 100%;
+  }
+}
+.container .top-banner .nav a {
   text-decoration: none;
   padding: 1.2%;
-  border: 1px solid lightslategray;
-  border-radius: 10%;
 }
 .footer {
   width: 100%;
@@ -202,10 +230,22 @@ img {
   font-size: 1.6rem;
   padding: 20px;
 }
+@media (max-width: 500px) {
+  .home {
+    padding: 2%;
+  }
+}
 .home header {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home header {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
 }
 .home header .funbus-img {
   display: flex;
@@ -216,22 +256,35 @@ img {
 .home header .funbus-img .funbus {
   margin-bottom: 2%;
 }
-.home header h1 {
-  width: 49%;
-}
 .home .content-section {
   margin: 30px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
 }
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content {
   width: 48%;
   padding-left: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
 }
 .home .content-section .img-content img {
   border-radius: 10px;
@@ -239,6 +292,16 @@ img {
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content :first-child {
+    order: 2;
+  }
+}
+@media (max-width: 500px) {
+  .home .inverse-content :last-child {
+    order: 0;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -261,9 +324,21 @@ img {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 65%;
+  }
 }
 .home .content-pick .destination .btn {
   color: white;
@@ -273,4 +348,9 @@ img {
   height: 15%;
   padding-top: 5%;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination .btn {
+    padding: 2%;
+  }
 }

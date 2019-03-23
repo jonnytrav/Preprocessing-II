@@ -4,24 +4,41 @@
         flex-flow: row wrap;
         width: 100%;
         margin-top: 4%;
-        margin-bottom: 3.5%;
-       
-        nav {
+        margin-bottom: 3.5%;      
+        justify-content: space-between;
+            
+
+        @media @mobile {
+            .flex;
+            flex-flow: column wrap;
+        }
+        h1 {
+            width: 35%;
+            @media @mobile {
+                margin-left: 32%;
+                margin-bottom: 2%;     
+            }
+        }
+        
+        
+        .nav {
             .flex;
             flex-flow: row wrap;
-            justify-content: space-around;
-            width: 49%;
+            justify-content: space-between;
+            width: 45%;
             align-items: center;
-            
+
+            @media @mobile {
+                width: 100%;
+            }
+
+                
             a {
                 text-decoration: none;
                 padding: 1.2%;
-                border: 1px solid lightslategray;
-                border-radius: 10%;
             }
-    
         }
-
     }
-    
 }
+    
+    

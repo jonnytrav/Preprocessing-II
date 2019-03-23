@@ -1,8 +1,17 @@
 .home {
+  @media @mobile {
+    padding: 2%;
+  }
   header {
     .flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     border-bottom: 2px dashed @silver;
+
+    @media @mobile {
+      .flex;
+      flex-flow: column nowrap;
+      width: 100%;
+    }
 
     .funbus-img {
       .flex;
@@ -13,12 +22,7 @@
       .funbus {
         margin-bottom: 2%;
       }
-
-    }
-    h1 {
-      width: 49%;
-    }
-    
+    }   
   }
 
   .content-section {
@@ -27,16 +31,29 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      .flex;
+      flex-flow: column wrap;
+
+    }
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -47,6 +64,18 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    :first-child {
+      @media @mobile {
+        order: 2;
+      }
+    }
+    :last-child {
+      @media @mobile {
+        order: 0;
+      }
+    }
+
 
     .text-content {
       padding-left: 1%;
@@ -73,25 +102,30 @@
     justify-content: space-between;
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
+
+    @media @mobile {
+      .flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
     
     
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    
+
+      @media @mobile {
+        width: 65%;
+      }
 
       .btn {
-        color: white;
-        background-color: @eastern-blue;
-        border-radius: 15%;
-        width: 100%;
-        height: 15%;     
-        padding-top: 5%;    
-        text-align: center;
-       
-      }
-      
+        .btn;
+
+        @media @mobile {
+          padding: 2%;
+        }
+      }      
     }
   }
-}// home
+}
